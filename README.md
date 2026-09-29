@@ -1,14 +1,18 @@
-# Used Car Price Prediction
+# 🚗 Used Car Price Prediction
 
 An end-to-end machine learning project for predicting used car prices. The project covers data cleaning, exploratory data analysis, feature preparation, model development, model evaluation, and a Streamlit application for making price predictions.
 
-## Project Overview
+## 🚀 Live Demo
+
+👉 [Try the Used Car Price Predictor](https://used-car-price-prediction.streamlit.app/)
+
+## 📌 Project Overview
 
 The project uses multiple used-car datasets that were cleaned and analyzed before being prepared for machine learning.
 
 **Workflow:** Raw datasets → Data cleaning & EDA → Model preparation → Model training → Model evaluation → Saved model → Streamlit application
 
-## Project Structure
+## 🗂️ Project Structure
 
 ```text
 used-car-price-prediction/
@@ -24,7 +28,7 @@ used-car-price-prediction/
 └── vehicle_lookup.pkl
 ```
 
-## Notebooks
+## 📓 Notebooks
 
 The first four notebooks contain the analysis and cleaning work for the individual datasets.
 
@@ -35,7 +39,7 @@ The first four notebooks contain the analysis and cleaning work for the individu
 
 `car_price_predictor.ipynb` contains the machine-learning workflow, including preprocessing, model development, evaluation, and selection of the final model.
 
-## Streamlit Application
+## 🚀 Streamlit Application
 
 `car_price_predictor_application.py` contains the interactive Streamlit application.
 
@@ -52,13 +56,19 @@ Users can provide:
 
 The application returns a predicted used-car price and a ±10% market range around the prediction.
 
-Run the application locally with:
+### 📸 Application Screenshots
 
-```bash
-streamlit run car_price_predictor_application.py
-```
+#### Input
 
-## Machine Learning Workflow
+![Car Price Predictor Input](screenshots/input.png)
+
+#### Output
+
+![Car Price Predictor Output](screenshots/output.png)
+
+
+
+## 🤖 Machine Learning Workflow
 
 1. **Data collection** — Used-car datasets were obtained from Kaggle.
 2. **Data cleaning** — Individual datasets were inspected and cleaned, including missing-value handling and vehicle-related data processing.
@@ -68,13 +78,13 @@ streamlit run car_price_predictor_application.py
 6. **Model saving** — The trained model and required preprocessing information are stored in `used_car_price_model.pkl`.
 7. **Application** — The saved model is integrated into the Streamlit application.
 
-## Supporting Files
+## 📁 Supporting Files
 
 - `used_car_price_model.pkl` — saved trained model and preprocessing objects required by the application.
 - `vehicle_lookup.pkl` — vehicle lookup information used by the application.
 - `utils.py` — reusable data-cleaning and preprocessing utilities.
 
-## Data
+## 📊 Data
 
 The original raw and cleaned datasets are not included in this GitHub repository because some files are large.
 
@@ -82,7 +92,7 @@ The `.gitignore` excludes raw/cleaned datasets, CSV files, Python cache files, J
 
 The notebooks document the data-analysis and cleaning workflow used to prepare the data.
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - Python
 - Pandas
@@ -93,7 +103,7 @@ The notebooks document the data-analysis and cleaning workflow used to prepare t
 - Jupyter Notebook
 - Streamlit
 
-## Project Components
+## 🧩 Project Components
 
 | Component | Purpose |
 |---|---|
@@ -104,15 +114,14 @@ The notebooks document the data-analysis and cleaning workflow used to prepare t
 | `vehicle_lookup.pkl` | Vehicle lookup data for the application |
 | `car_price_predictor_application.py` | Streamlit prediction application |
 
-## Future Improvements
+## 🔮 Future Improvements
 
-- Deploy the Streamlit application online
 - Add model monitoring and retraining workflows
 - Improve prediction accuracy with additional features
 - Add more comprehensive model evaluation and visualizations
 - Automate data and model pipelines
 
-## Author
+## 👨‍💻 Author
 
 **Biprasish Singha**
 
