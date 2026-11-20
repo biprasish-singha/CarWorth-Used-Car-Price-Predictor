@@ -6,6 +6,16 @@ A machine learning web app that estimates the price of a used car in India. Pick
 
 **API docs:** https://carworth-used-car-price-predictor.onrender.com/docs
 
+## 🧠 How it works
+
+```
+Browser (HTML/CSS/JS)  ──►  FastAPI  ──►  specification lookup  ──►  XGBoost pipeline  ──►  price
+```
+
+1. The user selects brand, model, variant, fuel type and transmission, then enters year, kilometres driven and previous owners.
+2. The API looks up the remaining specifications from `vehicle_specifications.pkl`.
+3. The full feature row goes to the trained model pipeline, which returns the predicted price in ₹.
+
 | Step 1: Vehicle Details |
 |:---:|
 | ![Vehicle details](screenshots/input-1.png) |
@@ -29,16 +39,6 @@ A machine learning web app that estimates the price of a used car in India. Pick
 - Vehicle specifications (body type, engine size, weight, power and so on) are looked up automatically, so users only enter what they know
 - Still returns an estimate when the exact variant/fuel/transmission combination isn't in the data, by falling back to the closest match
 - Responsive layout, with clear error and loading states
-
-## 🧠 How it works
-
-```
-Browser (HTML/CSS/JS)  ──►  FastAPI  ──►  specification lookup  ──►  XGBoost pipeline  ──►  price
-```
-
-1. The user selects brand, model, variant, fuel type and transmission, then enters year, kilometres driven and previous owners.
-2. The API looks up the remaining specifications from `vehicle_specifications.pkl`.
-3. The full feature row goes to the trained model pipeline, which returns the predicted price in ₹.
 
 ## 📊 Data
 
